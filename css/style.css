@@ -1,6 +1,5 @@
 *{
     text-align: center;
-    color: white;
 }
 
 footer{
@@ -32,6 +31,7 @@ button{
 body{
     background-image: url(/cadeado2.jpeg);
     background-size: cover;
+    color: white;
 }
 
 .mother{
