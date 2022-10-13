@@ -22,10 +22,15 @@
                 <input type="text" name="entrada" id="msg_in" value="Digite aqui seu texto"><br>
                 <br>
                 Utilizar qual tipo de códificação?<br>
-                <label for="base64">Base64</label> 
-                <input type="radio" name="cod" id="base64">
-                <label for="cesar">Cifra de César</label>
-                <input type="radio" name="cod" id="cesar"><br><br>
+                <select name="select">
+                    <option value="base64">Base64</option>
+                    <option value="cesar">Cifra de César</option>
+                </select><br><br>
+                Você deseja:<br>
+                <label for="codif">Codificar</label> 
+                <input type="radio" name="cod" id="codif">
+                <label for="decodif">Decodificar</label>
+                <input type="radio" name="cod" id="decodif"><br><br>
                 <button>Acho que esse texto muda com a ajuda da função</button><br><br>
                 <label for="answer">Resposta: </label>
                 <input type="text" id="answer" value="Aqui será a resposta"><br><br>
@@ -35,7 +40,6 @@
                 <li>Escolha entre codificar ou descodificar o texto escrito;</li>
                 <li>Selecione um tipo de codificação;</li>
                 <li>Click no botão para finalizar o seu processo;</li>
-
             </div>
         </div>
     </main>

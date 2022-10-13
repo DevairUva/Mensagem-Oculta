@@ -13,7 +13,16 @@ li{
 
 input{
     color: black;
-    margin-top: 15px;
+    margin-top: 10px;
+}
+
+select{
+    margin-top: 10px;
+    color: black;
+}
+
+select option{
+    color: black;
 }
 
 button{
@@ -26,7 +35,7 @@ body{
 }
 
 .mother{
-    margin-top: 70px;
+    margin-top: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
