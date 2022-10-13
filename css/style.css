@@ -12,7 +12,7 @@ li{
 
 input{
     color: black;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 select{
@@ -43,4 +43,5 @@ body{
 
 .coluns{
     width: 400px;
+    margin-left: 130px;
 }
