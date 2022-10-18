@@ -17,22 +17,24 @@
         <div class="mother">
             <div class="coluns"></div>
             <div class="coluns colun_b">
-                <label for="msg_in">Escreva o texto a ser codificado ou descodificado:</label><br>
-                <input type="text" name="entrada" id="msg_in" value="Digite aqui seu texto"><br>
+                <label for="msg_in">Escreva abaixo o texto a ser codificado ou descodificado:</label><br>
+                <input type="text" name="entrada" id="msg_in"><br>
                 <br>
-                Utilizar qual tipo de códificação?<br>
-                <select name="select">
+                Utilizar qual tipo de códificação?a<br>
+                <select name="tipo" id="base_ou_cesar">
                     <option value="base64">Base64</option>
-                    <option value="cesar">Cifra de César</option>
+                    <option value="cesar" selected>Cifra de César</option>
                 </select><br><br>
+                <label for="increment" >Qual o valor do incremento para a Cifra de César?</label>
+                <input type="text" name="incr" id="increment"><br><br>
                 Você deseja:<br>
                 <label for="codif">Codificar</label> 
                 <input type="radio" name="cod" id="codif">
                 <label for="decodif">Decodificar</label>
                 <input type="radio" name="cod" id="decodif"><br><br>
-                <button>Acho que esse texto muda com a ajuda da função</button><br><br>
+                <button onclick="incrementoO()">Acho que esse texto muda com a ajuda da função</button><br><br>
                 <label for="answer">Resposta: </label>
-                <input type="text" id="answer" value="Aqui será a resposta"><br><br>
+                <input type="text" id="answer"><br><br>
                 <hr><br>
                 <strong>Manual de Instruções</strong>
                 <li>Digite um texto de sua preferência;</li>
