@@ -21,7 +21,8 @@
                 <input type="text" name="entrada" id="msg_in"><br>
                 <br>
                 Utilizar qual tipo de códificação?a<br>
-                <select name="tipo" id="base_ou_cesar">
+                <select name="tipo" id="base_ou_cesar" onchange="incrementoO()">
+                    
                     <option value="base64">Base64</option>
                     <option value="cesar" selected>Cifra de César</option>
                 </select><br><br>
@@ -32,7 +33,7 @@
                 <input type="radio" name="cod" id="codif">
                 <label for="decodif">Decodificar</label>
                 <input type="radio" name="cod" id="decodif"><br><br>
-                <button onclick="incrementoO()">Acho que esse texto muda com a ajuda da função</button><br><br>
+                <button>Acho que esse texto muda com a ajuda da função</button><br><br>
                 <label for="answer">Resposta: </label>
                 <input type="text" id="answer"><br><br>
                 <hr><br>
