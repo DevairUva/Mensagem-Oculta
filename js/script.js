@@ -1,57 +1,51 @@
-function incremento(){
-    let incremento = document.querySelector("#increment");
-    let select = document.getElementById("base_ou_cesar");
+function incremento(){ //habilita ou não a opção de incremento
+    let incremento = document.querySelector('#increment');
+    let select = document.getElementById('base_ou_cesar');
     let opcaoValor = select.options[select.selectedIndex].value;
-    let botao = document.getElementById("btn");
+    let botao = document.getElementById('btn');
 
-    if(opcaoValor == "base64"){
+    if(opcaoValor == 'base64'){
         incremento.disabled = true;
-        botao.setAttribute("onclick", "base64();");
+        botao.setAttribute('onclick', 'base64();');        
     } else {
         incremento.disabled = false;
-        botao.setAttribute("onclick", "cifraC();");
+        botao.setAttribute('onclick', 'cifraC();');
     }
 }
 
-// function usarBase64(botao){
-//     alert("função 640");
-//     botao.setAttribute("onclick", "base64(this)");
-// }
+function textoCodif(){ //muda o texto do botão para 'codificar'
+    let botao = document.getElementById('btn');    
 
-// function usarCesar(botao){
-//     alert("função Cesar");
-//     botao.setAttribute("onclick", "cifraC");
-// }
-
-function textoCodif(){
-    let botao = document.getElementById("btn");    
-
-    botao.textContent = "Codificar";
+    botao.textContent = 'Codificar';
 }
 
-function textoDecodif(){
-    let botao = document.getElementById("btn");    
+function textoDecodif(){ //muda o texto do botão para 'decodificar'
+    let botao = document.getElementById('btn');    
 
-    botao.textContent = "Decodificar";
+    botao.textContent = 'Decodificar';
 }
 
-function base64(){
-    let fraseInicial = document.getElementById("msg_in");
+function base64(){ //função para codificar em base64
+    //a função deve codificar ou decodificar a partir da opção escolhida no input radio
+    //É provável que precise de um if
+    let fraseInicial = document.getElementById('msg_in');
     let codificado = btoa(fraseInicial.value);
-    alert(codificado);
-    // let decodificado = atob(fraseInicial.value);
-    // alert(decodificado);
+    let resposta = document.getElementById('answer');
+    resposta.setAttribute('value', codificado);
+    //let decodificado = atob(fraseInicial.value);
+    //let resposta = document.getElementById('answer');
+    //resposta.setAttribute('value', decodificado);
 }
 
-function cifraC(){
+function cifraC(){ //função para codificar em Cesar
 
-    let alfa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
-    let fraseInicial = document.getElementById("msg_in");
+    let alfa = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    let fraseInicial = document.getElementById('msg_in');
 //    alert(fraseInicial.value); teste da variavel
-    let incremento = document.getElementById("increment");
-//    console.log("incremento.value = " +incremento.value); //teste da variavel
+    let incremento = document.getElementById('increment');
+//    console.log('incremento.value = ' +incremento.value); //teste da variavel
     let xyx = parseInt(incremento.value);
-//    console.log("xyx já convertido = "+xyx);
+//    console.log('xyx já convertido = '+xyx);
 //    console.log(typeof xyx);
     //teste da variavel
     let fraseFinal = [];
@@ -71,7 +65,7 @@ function cifraC(){
     //     fraseFinal[i] = alfa[(i+xyx)];
     // }
 
-    // alert(fraseFinal.join(""));
+    // alert(fraseFinal.join(''));
     // alert(fraseInicial.value);
 
 //     for (let i = 0; i < fraseInicial.length; i++){
@@ -88,13 +82,13 @@ function cifraC(){
 // //            fraseFinal[i] = ' ';
 // //        }
 //     }
-//     alert(fraseFinal.join(""));
+//     alert(fraseFinal.join(''));
 }
 
 // function resposta(){
 //     let opcaoValor = select.options[select.selectedIndex].value;
 
-//     if(opcaoValor == "base64"){
+//     if(opcaoValor == 'base64'){
 //         base64();
 //     } else {
 //         incremento.disabled = false;
