@@ -1,12 +1,3 @@
-function incrementoOffa(){
-    let tipo = document.querySelector("tipo");
-    let increment = document.getElementById("increment")
-
-    if(tipo.value == "base64"){
-        increment.disabled;
-    }
-}
-
 function incremento(){
     let incremento = document.querySelector("#increment");
     let select = document.getElementById("base_ou_cesar");
@@ -17,7 +8,6 @@ function incremento(){
     } else {
         incremento.disabled = false;
     }
-
 }
 
 function textoCodif(){
@@ -32,7 +22,15 @@ function textoDecodif(){
     botao.textContent = "Decodificar";
 }
 
-function imprimir(){
+function base64(){
+    let fraseInicial = document.getElementById("msg_in");
+    let codificado = btoa(fraseInicial.value);
+    alert(codificado);
+    // let decodificado = atob(fraseInicial.value);
+    // alert(decodificado);
+}
+
+function cifraC(){
 
     let alfa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     let fraseInicial = document.getElementById("msg_in");
@@ -79,4 +77,14 @@ function imprimir(){
 //     }
 //     alert(fraseFinal.join(""));
 
+}
+
+function resposta(){
+    let opcaoValor = select.options[select.selectedIndex].value;
+
+    if(opcaoValor == "base64"){
+        base64();
+    } else {
+        incremento.disabled = false;
+    }
 }
