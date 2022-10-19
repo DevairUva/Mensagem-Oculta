@@ -2,25 +2,31 @@ function incremento(){
     let incremento = document.querySelector("#increment");
     let select = document.getElementById("base_ou_cesar");
     let opcaoValor = select.options[select.selectedIndex].value;
+    let botao = document.getElementById("btn");
 
     if(opcaoValor == "base64"){
         incremento.disabled = true;
+        botao.setAttribute("onclick", "base64();");
     } else {
         incremento.disabled = false;
+        botao.setAttribute("onclick", "cifraC();");
     }
 }
 
-// https://pt.stackoverflow.com/questions/229001/alterar-fun%C3%A7%C3%A3o-do-onclick
-// function removerContato(botao){
-//     alert("função remover");
-//     botao.setAttribute("onclick", "v")
+// function usarBase64(botao){
+//     alert("função 640");
+//     botao.setAttribute("onclick", "base64(this)");
+// }
+
+// function usarCesar(botao){
+//     alert("função Cesar");
+//     botao.setAttribute("onclick", "cifraC");
 // }
 
 function textoCodif(){
     let botao = document.getElementById("btn");    
 
     botao.textContent = "Codificar";
-    botao.onclick = base64();
 }
 
 function textoDecodif(){
@@ -83,15 +89,14 @@ function cifraC(){
 // //        }
 //     }
 //     alert(fraseFinal.join(""));
-
 }
 
-function resposta(){
-    let opcaoValor = select.options[select.selectedIndex].value;
+// function resposta(){
+//     let opcaoValor = select.options[select.selectedIndex].value;
 
-    if(opcaoValor == "base64"){
-        base64();
-    } else {
-        incremento.disabled = false;
-    }
-}
+//     if(opcaoValor == "base64"){
+//         base64();
+//     } else {
+//         incremento.disabled = false;
+//     }
+// }
