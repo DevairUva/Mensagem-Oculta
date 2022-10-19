@@ -7,7 +7,7 @@ function incrementoOffa(){
     }
 }
 
-function incrementoO(){
+function incremento(){
     let incremento = document.querySelector("#increment");
     let select = document.getElementById("base_ou_cesar");
     let opcaoValor = select.options[select.selectedIndex].value;
@@ -18,6 +18,18 @@ function incrementoO(){
         incremento.disabled = false;
     }
 
+}
+
+function textoCodif(){
+    let botao = document.getElementById("btn");    
+
+    botao.textContent = "Codificar";
+}
+
+function textoDecodif(){
+    let botao = document.getElementById("btn");    
+
+    botao.textContent = "Decodificar";
 }
 
 // function imprimir(){
