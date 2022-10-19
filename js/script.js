@@ -10,10 +10,17 @@ function incremento(){
     }
 }
 
+// https://pt.stackoverflow.com/questions/229001/alterar-fun%C3%A7%C3%A3o-do-onclick
+// function removerContato(botao){
+//     alert("função remover");
+//     botao.setAttribute("onclick", "v")
+// }
+
 function textoCodif(){
     let botao = document.getElementById("btn");    
 
     botao.textContent = "Codificar";
+    botao.onclick = base64();
 }
 
 function textoDecodif(){
