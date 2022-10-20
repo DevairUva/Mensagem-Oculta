@@ -1,8 +1,8 @@
-function codificacao(){ //habilita ou não a opção de incremento
-    let incremento = document.querySelector('#increment');
-    let select = document.getElementById('base_ou_cesar');
-    let opcaoValor = select.options[select.selectedIndex].value;
-    let botao = document.getElementById('btn');
+function codificacao(){ //habbilita o tipo de codificação
+    const incremento = document.querySelector('#increment');
+    const select = document.getElementById('base_ou_cesar');
+    const opcaoValor = select.options[select.selectedIndex].value;
+    const botao = document.getElementById('btn');
 
     if(opcaoValor == 'base64'){
         incremento.disabled = true;
@@ -14,25 +14,25 @@ function codificacao(){ //habilita ou não a opção de incremento
 }
 
 function textoCodif(){ //muda o texto do botão para 'codificar'
-    let botao = document.getElementById('btn');    
+    const botao = document.getElementById('btn');    
 
-    botao.textContent = 'Codificar';
+    botao.value = 'Codificar';
 }
 
 function textoDecodif(){ //muda o texto do botão para 'decodificar'
-    let botao = document.getElementById('btn');    
+    const botao = document.getElementById('btn');    
 
-    botao.textContent = 'Decodificar';
+    botao.value = 'Decodificar';
 }
 
 function base64(){ //função para codificar em base64
     //a função deve codificar ou decodificar a partir da opção escolhida no input radio
-    let fraseInicial = document.getElementById('msg_in');
-    let codificado = btoa(fraseInicial.value);
-    let decodificado = atob(fraseInicial.value);
-    let resposta = document.getElementById('answer');
-    let codificar = document.getElementById('codif');
-    let decodificar = document.getElementById('decodif');
+    const fraseInicial = document.getElementById('msg_in');
+    const codificado = btoa(fraseInicial.value);
+    const decodificado = atob(fraseInicial.value);
+    const resposta = document.getElementById('answer');
+    const codificar = document.getElementById('codif');
+    const decodificar = document.getElementById('decodif');
 
     if(codificar.checked){
         resposta.setAttribute('value', codificado);        
@@ -43,40 +43,43 @@ function base64(){ //função para codificar em base64
     }
 }
 
+function teste(){
+    alert("testando o botão");
+}
+
 function cifraC(){ //função para codificar em Cesar
 
-    let alfa = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    let fraseInicial = document.getElementById('msg_in');
+    const alfa = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    const fraseInicial = document.getElementById('msg_in');
 //    alert(fraseInicial.value); teste da variavel
-    let incremento = document.getElementById('increment');
+    const incremento = document.getElementById('increment');
 //    console.log('incremento.value = ' +incremento.value); //teste da variavel
-    let xyx = parseInt(incremento.value);
+    const xyx = parseInt(incremento.value);
 //    console.log('xyx já convertido = '+xyx);
 //    console.log(typeof xyx);
     //teste da variavel
-    let fraseFinal = [];
+    const fraseFinal = [];
 
-    for (let i=0; i<fraseInicial.length; i++){
-        for(let j=0; j<alfa.length; j++){
-            if(fraseInicial[i] == alfa[j]){
+    for (const i=0; i<fraseInicial.length; i++){
+        for(const j=0; j<alfa.length; j++){
+            if(fraseInicial.value[i] == alfa[j]){
                 fraseFinal[i] = alfa[j];
-                console.log(i);
-                console.log(j);
+                alert(fraseFinal.value);
             }
         }
     }
 
 
-    // for(let i=0; i<5; i++){
+    // for(const i=0; i<5; i++){
     //     fraseFinal[i] = alfa[(i+xyx)];
     // }
 
     // alert(fraseFinal.join(''));
     // alert(fraseInicial.value);
 
-//     for (let i = 0; i < fraseInicial.length; i++){
+//     for (const i = 0; i < fraseInicial.length; i++){
 // //        if(fraseInicial[i] != ' '){
-//             for (let j = 0; j < alfa.length; j++){
+//             for (const j = 0; j < alfa.length; j++){
 //                 if (fraseInicial[i] == alfa[j]){
 //                     alert(j);
 //                     alert(xyx);
@@ -92,7 +95,7 @@ function cifraC(){ //função para codificar em Cesar
 }
 
 // function resposta(){
-//     let opcaoValor = select.options[select.selectedIndex].value;
+//     const opcaoValor = select.options[select.selectedIndex].value;
 
 //     if(opcaoValor == 'base64'){
 //         base64();
