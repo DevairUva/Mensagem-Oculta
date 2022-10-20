@@ -52,6 +52,7 @@ function cifraC(){//função para codificar em cesar
     const tamanho = fraseInicial.value.length;
     const codificar = document.getElementById('codif');
     const decodificar = document.getElementById('decodif');
+    const fraseFinal = document.getElementById('answer');
 
     if(codificar.checked){
         for(i=0; i<tamanho; i++){
@@ -65,7 +66,7 @@ function cifraC(){//função para codificar em cesar
                 resposta[i] = ' ';
             }
         }
-        alert(resposta.join(""));
+        fraseFinal.setAttribute('value', resposta.join(""));
     } else if (decodificar.checked){
         for(i=0; i<tamanho; i++){
             if(fraseInicial.value[i] != " "){
@@ -78,6 +79,6 @@ function cifraC(){//função para codificar em cesar
                 resposta[i] = ' ';
             }
         }
-        alert(resposta.join(""));
+        fraseFinal.setAttribute('value', resposta.join(""));
     }
 }
