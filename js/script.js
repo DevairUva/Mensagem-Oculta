@@ -1,4 +1,4 @@
-function incremento(){ //habilita ou não a opção de incremento
+function codificacao(){ //habilita ou não a opção de incremento
     let incremento = document.querySelector('#increment');
     let select = document.getElementById('base_ou_cesar');
     let opcaoValor = select.options[select.selectedIndex].value;
