@@ -27,14 +27,20 @@ function textoDecodif(){ //muda o texto do botão para 'decodificar'
 
 function base64(){ //função para codificar em base64
     //a função deve codificar ou decodificar a partir da opção escolhida no input radio
-    //É provável que precise de um if
     let fraseInicial = document.getElementById('msg_in');
     let codificado = btoa(fraseInicial.value);
+    let decodificado = atob(fraseInicial.value);
     let resposta = document.getElementById('answer');
-    resposta.setAttribute('value', codificado);
-    //let decodificado = atob(fraseInicial.value);
-    //let resposta = document.getElementById('answer');
-    //resposta.setAttribute('value', decodificado);
+    let codificar = document.getElementById('codif');
+    let decodificar = document.getElementById('decodif');
+
+    if(codificar.checked){
+        resposta.setAttribute('value', codificado);        
+    }else if(decodificar.checked){
+        resposta.setAttribute('value', decodificado);
+    }else{
+        alert("Escolha entre codificar ou decodificar");
+    }
 }
 
 function cifraC(){ //função para codificar em Cesar
