@@ -43,63 +43,41 @@ function base64(){ //função para codificar em base64
     }
 }
 
-function teste(){
-    alert("testando o botão");
-}
-
-function cifraC(){ //função para codificar em Cesar
-
-    const alfa = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+function cifraC(){//função para codificar em cesar
+    var alfa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     const fraseInicial = document.getElementById('msg_in');
-//    alert(fraseInicial.value); teste da variavel
     const incremento = document.getElementById('increment');
-//    console.log('incremento.value = ' +incremento.value); //teste da variavel
-    const xyx = parseInt(incremento.value);
-//    console.log('xyx já convertido = '+xyx);
-//    console.log(typeof xyx);
-    //teste da variavel
-    const fraseFinal = [];
+    const x = parseInt(incremento.value);
+    const resposta = [];
+    const tamanho = fraseInicial.value.length;
+    const codificar = document.getElementById('codif');
+    const decodificar = document.getElementById('decodif');
 
-    for (const i=0; i<fraseInicial.length; i++){
-        for(const j=0; j<alfa.length; j++){
-            if(fraseInicial.value[i] == alfa[j]){
-                fraseFinal[i] = alfa[j];
-                alert(fraseFinal.value);
+    if(codificar.checked){
+        for(i=0; i<tamanho; i++){
+            if(fraseInicial.value[i] != " "){
+                for(j=0; j<alfa.length; j++){
+                    if(fraseInicial.value[i] == alfa[j]){
+                        resposta[i] = alfa[(j+x) % alfa.length];
+                    }
+                }
+            }else{
+                resposta[i] = ' ';
             }
         }
+        alert(resposta.join(""));
+    } else if (decodificar.checked){
+        for(i=0; i<tamanho; i++){
+            if(fraseInicial.value[i] != " "){
+                for(j=0; j<alfa.length; j++){
+                    if(fraseInicial.value[i] == alfa[j]){
+                        resposta[i] = alfa[(j-x) % alfa.length];
+                    }
+                }
+            }else{
+                resposta[i] = ' ';
+            }
+        }
+        alert(resposta.join(""));
     }
-
-
-    // for(const i=0; i<5; i++){
-    //     fraseFinal[i] = alfa[(i+xyx)];
-    // }
-
-    // alert(fraseFinal.join(''));
-    // alert(fraseInicial.value);
-
-//     for (const i = 0; i < fraseInicial.length; i++){
-// //        if(fraseInicial[i] != ' '){
-//             for (const j = 0; j < alfa.length; j++){
-//                 if (fraseInicial[i] == alfa[j]){
-//                     alert(j);
-//                     alert(xyx);
-//                     fraseFinal[i] = alfa[(j + xyx) % alfa.length];
-//                     break;
-//                 }
-//             }
-// //        }else{
-// //            fraseFinal[i] = ' ';
-// //        }
-//     }
-//     alert(fraseFinal.join(''));
 }
-
-// function resposta(){
-//     const opcaoValor = select.options[select.selectedIndex].value;
-
-//     if(opcaoValor == 'base64'){
-//         base64();
-//     } else {
-//         incremento.disabled = false;
-//     }
-// }
