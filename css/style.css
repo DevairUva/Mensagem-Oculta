@@ -43,5 +43,14 @@ body{
 
 .coluns{
     width: 400px;
-    margin-left: 130px;
+    margin-left: 115px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.top{
+    margin-top: 15px;
 }

@@ -16,34 +16,49 @@
     <main>
         <div class="mother">
             <div class="coluns"></div>
-            <div class="coluns colun_b">
-                <form action="">
-                    <label for="msg_in">Escreva abaixo o texto a ser codificado ou descodificado:</label><br>
-                    <input type="text" name="entrada" id="msg_in"><br>
-                    <br>
-                    Utilizar qual tipo de códificação?<br>
-                    <select name="tipo" id="base_ou_cesar" onchange="codificacao()">
-                        <option value="base64">Base64</option>
-                        <option value="cesar" selected>Cifra de César</option>
-                    </select><br><br>
-                    <label for="increment" >Qual o valor será utilizado para a Cifra de César?</label>
-                    <input type="text" name="incr" id="increment"><br><br>
-                    Você deseja:<br>
-                    <label for="codif">Codificar</label> 
-                    <input type="radio" name="cod" id="codif" onclick="textoCodif()">
-                    <label for="decodif">Decodificar</label>
-                    <input type="radio" name="cod" id="decodif" onclick="textoDecodif()"><br><br>
-                    <input type="button" onclick="cifraC()" name="bt" id="btn" value="Codificar Mensagem!"><br><br>
-                    <label for="answer">Resposta: </label>
-                    <input type="text" id="answer"><br><br>
-                </form>
-                <hr><br>
-                <strong>Manual de Instruções</strong>
-                <li>Digite um texto de sua preferência;</li>
-                <li>Escolha entre codificar ou descodificar o texto escrito;</li>
-                <li>Selecione um tipo de codificação;</li>
-                <li>Para a Cifra de César, escreva o incremento;</li>
-                <li>Click no botão para finalizar o seu processo.</li>
+            <div class="coluns">
+                <div>
+                    <form action="" class="formulario">
+                        <div>
+                            <label for="msg_in">Escreva abaixo o texto a ser codificado ou descodificado:</label><br>
+                            <input type="text" name="entrada" id="msg_in">
+                        </div>
+                        <div class="top">
+                            Utilizar qual tipo de códificação?<br>
+                            <select name="tipo" id="base_ou_cesar" onchange="codificacao()">
+                                <option value="base64">Base64</option>
+                                <option value="cesar" selected>Cifra de César</option>
+                            </select>
+                        </div>
+                        <div class="top">
+                            <label for="increment" >Qual o valor será utilizado para a Cifra de César?</label><br>
+                            <input type="text" name="incr" id="increment">    
+                        </div>
+                        <div class="top">
+                            Você deseja:<br>
+                            <label for="codif">Codificar</label> 
+                            <input type="radio" name="cod" id="codif" onclick="textoCodif()">
+                            <label for="decodif">Decodificar</label>
+                            <input type="radio" name="cod" id="decodif" onclick="textoDecodif()">
+                        </div>
+                        <div class="top">
+                            <input type="button" onclick="cifraC()" name="bt" id="btn" value="Codificar Mensagem!">
+                        </div>
+                        <div class="top">
+                            <label for="answer">Resposta: </label>
+                            <input type="text" id="answer">    
+                        </div>
+                    </form>
+                </div>
+                <div class="top">
+                    <hr>
+                    <strong>Manual de Instruções</strong>
+                    <li class="top">Digite um texto de sua preferência;</li>
+                    <li class="top">Escolha entre codificar ou descodificar o texto escrito;</li>
+                    <li class="top">Selecione um tipo de codificação;</li>
+                    <li class="top">Para a Cifra de César, escreva o incremento;</li>
+                    <li class="top">Click no botão para finalizar o seu processo.</li>
+                </div>
             </div>
         </div>
     </main>
