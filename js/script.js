@@ -1,5 +1,11 @@
-const myDiv = document.createElement('div');
+//Agora eu preciso criar uma const que será uma div
+// outra que será meu input,
+// outra que será minha label;
+// dar as propriedades de cada uma;
+// E depois "encapsular" uma dentro da outra com o append ou prepend;
+// // Depois disso, dentro da função codificar, introduzir minha div com meu input e minha label já configurados, casp o usuário queira usar a cífra de cesar;
 
+const myDiv = document.createElement('div');
 
 function codificacao(){ //habbilita o tipo de codificação
     const incremento = document.querySelector('#increment');
