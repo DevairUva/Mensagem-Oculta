@@ -28,8 +28,8 @@ function textoDecodif(){ //muda o texto do botão para 'decodificar'
 function base64(){ //função para codificar em base64
     //a função deve codificar ou decodificar a partir da opção escolhida no input radio
     const fraseInicial = document.getElementById('msg_in');
-    const codificado = btoa(fraseInicial.value);
-    const decodificado = atob(fraseInicial.value);
+    const codificado = window.btoa(fraseInicial.value);
+    const decodificado = window.atob(fraseInicial.value);
     const resposta = document.getElementById('answer');
     const codificar = document.getElementById('codif');
     const decodificar = document.getElementById('decodif');
