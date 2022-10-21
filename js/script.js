@@ -44,6 +44,7 @@ function base64(){ //função para codificar em base64
 }
 
 function cifraC(){//função para codificar em cesar
+    //a função deve codificar ou decodificar a partir da opção escolhida no input radio
     var alfa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
     var maiusculas = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     const fraseInicial = document.getElementById('msg_in');
@@ -90,5 +91,7 @@ function cifraC(){//função para codificar em cesar
             }
         }
         fraseFinal.setAttribute('value', resposta.join(""));
+    } else{
+        alert("Escolha entre codificar ou decodificar");
     }
 }
