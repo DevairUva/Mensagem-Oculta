@@ -45,53 +45,47 @@ function base64(){ //função para codificar em base64
 
 function cifraC(){//função para codificar em cesar
     var alfa = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    var maiusculas = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     const fraseInicial = document.getElementById('msg_in');
     const incremento = document.getElementById('increment');
     const x = parseInt(incremento.value);
     const resposta = [];
-    const tamanho = fraseInicial.value.length;
     const codificar = document.getElementById('codif');
     const decodificar = document.getElementById('decodif');
     const fraseFinal = document.getElementById('answer');
 
     if(codificar.checked){
-        for(i=0; i<tamanho; i++){
-            if(fraseInicial.value[i] != " "){
+        for(i=0; i<fraseInicial.value.length; i++){
+            if(fraseInicial.value[i] != ' '){
                 for(j=0; j<alfa.length; j++){
                     if(fraseInicial.value[i] == alfa[j]){
                         resposta[i] = alfa[(j+x)];
                         break;
+                    } else if (fraseInicial.value[i] == maiusculas[j]){
+                            resposta[i] = maiusculas[(j+x)];
+                            break;
                     } else if (fraseInicial.value[i] != alfa[j]){
-                        const letra = fraseInicial.value[i].toLowerCase();
-                        for(k=0; k<alfa.length; k++){
-                            if(letra == alfa[k]){
-                                resposta[i] = alfa[(k+x)].toUpperCase();
-                            }
-                        }
-                    }
+                        resposta[i] = fraseInicial.value[i];}
                 }
-            }else{
+            } else {
                 resposta[i] = ' ';
             }
         }
         fraseFinal.setAttribute('value', resposta.join(""));
     } else if (decodificar.checked){
-        for(i=0; i<tamanho; i++){
-            if(fraseInicial.value[i] != " "){
+        for(i=0; i<fraseInicial.value.length; i++){
+            if(fraseInicial.value[i] != ' '){
                 for(j=0; j<alfa.length; j++){
                     if(fraseInicial.value[i] == alfa[j]){
                         resposta[i] = alfa[(j-x)];
                         break;
+                    } else if (fraseInicial.value[i] == maiusculas[j]){
+                            resposta[i] = maiusculas[(j-x)];
+                            break;
                     } else if (fraseInicial.value[i] != alfa[j]){
-                        const letra = fraseInicial.value[i].toLowerCase();
-                        for(k=0; k<alfa.length; k++){
-                            if(letra == alfa[k]){
-                                resposta[i] = alfa[(k-x)].toUpperCase();
-                            }
-                        }
-                    }
+                        resposta[i] = fraseInicial.value[i];}
                 }
-            }else{
+            } else {
                 resposta[i] = ' ';
             }
         }
