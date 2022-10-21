@@ -59,7 +59,15 @@ function cifraC(){//função para codificar em cesar
             if(fraseInicial.value[i] != " "){
                 for(j=0; j<alfa.length; j++){
                     if(fraseInicial.value[i] == alfa[j]){
-                        resposta[i] = alfa[(j+x) % alfa.length];
+                        resposta[i] = alfa[(j+x)];
+                        break;
+                    } else if (fraseInicial.value[i] != alfa[j]){
+                        const letra = fraseInicial.value[i].toLowerCase();
+                        for(k=0; k<alfa.length; k++){
+                            if(letra == alfa[k]){
+                                resposta[i] = alfa[(k+x)].toUpperCase();
+                            }
+                        }
                     }
                 }
             }else{
@@ -72,7 +80,15 @@ function cifraC(){//função para codificar em cesar
             if(fraseInicial.value[i] != " "){
                 for(j=0; j<alfa.length; j++){
                     if(fraseInicial.value[i] == alfa[j]){
-                        resposta[i] = alfa[(j-x) % alfa.length];
+                        resposta[i] = alfa[(j-x)];
+                        break;
+                    } else if (fraseInicial.value[i] != alfa[j]){
+                        const letra = fraseInicial.value[i].toLowerCase();
+                        for(k=0; k<alfa.length; k++){
+                            if(letra == alfa[k]){
+                                resposta[i] = alfa[(k-x)].toUpperCase();
+                            }
+                        }
                     }
                 }
             }else{
