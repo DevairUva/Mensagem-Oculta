@@ -1,3 +1,6 @@
+const myDiv = document.createElement('div');
+
+
 function codificacao(){ //habbilita o tipo de codificação
     const incremento = document.querySelector('#increment');
     const select = document.getElementById('base_ou_cesar');
