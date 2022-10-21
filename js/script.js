@@ -2,8 +2,8 @@
 // outra que será meu input,
 // outra que será minha label;
 // dar as propriedades de cada uma;
-// E depois "encapsular" uma dentro da outra com o append ou prepend;
-// // Depois disso, dentro da função codificar, introduzir minha div com meu input e minha label já configurados, casp o usuário queira usar a cífra de cesar;
+// E depois "encapsular" uma dentro da outra com o append ou prepend (inclusive dentro da função codificar);
+// Depois disso, dentro da função codificar, introduzir minha div com meu input e minha label já configurados, casp o usuário queira usar a cífra de cesar;
 
 const myDiv = document.createElement('div');
 
