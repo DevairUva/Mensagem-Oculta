@@ -16,13 +16,13 @@ function codificacao(){ //habbilita o tipo de codificação
 function textoCodif(){ //muda o texto do botão para 'codificar'
     const botao = document.getElementById('btn');    
 
-    botao.value = 'Codificar';
+    botao.value = 'Codificar Mensagem!';
 }
 
 function textoDecodif(){ //muda o texto do botão para 'decodificar'
     const botao = document.getElementById('btn');    
 
-    botao.value = 'Decodificar';
+    botao.value = 'Decodificar Mensagem!';
 }
 
 function base64(){ //função para codificar em base64
