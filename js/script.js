@@ -69,10 +69,10 @@ function cifraC(){//função para codificar em cesar
             if(fraseInicial.value[i] != ' '){
                 for(j=0; j<alfa.length; j++){
                     if(fraseInicial.value[i] == alfa[j]){
-                        resposta[i] = alfa[(j+x)];
+                        resposta[i] = alfa[(j+x)%alfa.length];
                         break;
                     } else if (fraseInicial.value[i] == maiusculas[j]){
-                            resposta[i] = maiusculas[(j+x)];
+                            resposta[i] = maiusculas[(j+x)%maiusculas.length];
                             break;
                     } else if (fraseInicial.value[i] != alfa[j]){
                         resposta[i] = fraseInicial.value[i];}
@@ -87,11 +87,21 @@ function cifraC(){//função para codificar em cesar
             if(fraseInicial.value[i] != ' '){
                 for(j=0; j<alfa.length; j++){
                     if(fraseInicial.value[i] == alfa[j]){
-                        resposta[i] = alfa[(j-x)];
+                        let ab = (j-x)%alfa.length;
+                        for(w=ab; w<0; w++){
+                            ab += 26;
+                            w = ab;
+                        }
+                        resposta[i] = alfa[ab];
                         break;
                     } else if (fraseInicial.value[i] == maiusculas[j]){
-                            resposta[i] = maiusculas[(j-x)];
-                            break;
+                        let ab = (j-x)%maiusculas.length;
+                        for(w=ab; w<0; w++){
+                            ab += 26;
+                            w = ab;
+                        }
+                        resposta[i] = maiusculas[ab];
+                        break;
                     } else if (fraseInicial.value[i] != alfa[j]){
                         resposta[i] = fraseInicial.value[i];}
                 }
